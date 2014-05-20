@@ -1,4 +1,3 @@
 Example with
-- Springboot and REST-service 
-- REST-service implemented in Scala
-- Spring Data JPA
+- Springboot, REST-service and Spring Data JPA repo 
+- All implemented in Scala
