@@ -5,6 +5,10 @@ import org.springframework.web.bind.annotation._
 import org.springframework.beans.factory.annotation.Autowired
 import se.joelabs.scalaservice.entity.{Person, PersonRepo}
 
+/**
+ * The REST resource.
+ * @param repo entity repo
+ */
 @Controller
 class MyService @Autowired() (private val repo: PersonRepo) {
 

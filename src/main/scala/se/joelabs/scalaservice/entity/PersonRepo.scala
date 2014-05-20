@@ -8,10 +8,9 @@ package se.joelabs.scalaservice.entity
 import org.springframework.data.repository.CrudRepository
 
 /**
- * A repository of entities
+ * A repository of person entities.
  */
 trait PersonRepo extends CrudRepository[Person, java.lang.Long] {
   def findByName(lastName: String): List[Person]
-
   def findById(id: java.lang.Long): Person
 }
