@@ -5,7 +5,7 @@
  */
 package se.joelabs.scalaservice.entity
 
-import org.springframework.data.repository.{PagingAndSortingRepository, CrudRepository}
+import org.springframework.data.repository.PagingAndSortingRepository
 import org.springframework.data.rest.core.annotation.RepositoryRestResource
 import org.springframework.data.repository.query.Param
 
@@ -14,6 +14,10 @@ import org.springframework.data.repository.query.Param
  */
 @RepositoryRestResource(collectionResourceRel = "persons", path = "persons")
 trait PersonRepo extends PagingAndSortingRepository[Person, java.lang.Long] {
+
   def findByName(@Param("name") name: String): java.util.List[Person]
+
+  def findByNameStartingWith(@Param("name") name: String): java.util.List[Person]
+
   def findById(id: java.lang.Long): Person
 }

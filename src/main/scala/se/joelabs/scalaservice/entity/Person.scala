@@ -10,6 +10,7 @@ import scala.beans.BeanProperty
  * @param i items
  */
 @Entity
+@Index(columnList = "NAME")
 class Person(n: String, a: String, i: java.util.List[Item]) {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,6 +18,7 @@ class Person(n: String, a: String, i: java.util.List[Item]) {
   var id: java.lang.Long = _
 
   @BeanProperty
+  @Column(name="NAME")
   var name: String = n
 
   @BeanProperty
