@@ -1,4 +1,4 @@
-package se.joelabs.scalaservice
+package se.joelabs.scalaservice.rest
 
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation._

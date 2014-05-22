@@ -1,15 +1,16 @@
 package se.joelabs.scalaservice.entity
 
-import javax.persistence.{GenerationType, GeneratedValue, Id, Entity}
+import javax.persistence._
 import scala.beans.BeanProperty
 
 /**
  * A person
  * @param n name
  * @param a address
+ * @param i items
  */
 @Entity
-class Person(n: String, a: String) {
+class Person(n: String, a: String, i: java.util.List[Item]) {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   @BeanProperty
@@ -21,5 +22,9 @@ class Person(n: String, a: String) {
   @BeanProperty
   var address: String = a
 
-  def this() = this(null, null)
+  @OneToMany(cascade = Array(CascadeType.ALL))
+  @BeanProperty
+  var items: java.util.List[Item] = _
+
+  def this() = this(null, null, null)
 }
