@@ -16,6 +16,7 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguratio
 /**
  * Spring boot application
  */
+
 @ComponentScan
 @Configuration
 @EnableJpaRepositories
@@ -26,3 +27,5 @@ public class SpringApp {
         SpringApplication.run(SpringApp.class, args);
     }
 }
+
+
