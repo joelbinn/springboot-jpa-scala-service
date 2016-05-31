@@ -14,7 +14,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 @EnableAutoConfiguration
 class SampleConfig {
   @Bean
-  def  jacksonScalaModule():Module = {
+  def jacksonScalaModule(): Module = {
     DefaultScalaModule
   }
 }

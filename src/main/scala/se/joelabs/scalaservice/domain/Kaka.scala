@@ -2,15 +2,21 @@ package se.joelabs.scalaservice.domain
 
 import javax.persistence._
 
+import scala.annotation.meta.field
+
 @Entity
-case class Kaka(_id: Long, _color: String) {
-  def this() = this(null.asInstanceOf[Long],null)
+@Table(name = "KAKA")
+case class Kaka
+(
 
-  @Id
-  @GeneratedValue
-  @Column(name="ID")
-  val id: Long = _id
+  @(Id@field)
+  @(GeneratedValue@field)
+  @(Column@field)(name = "PK")
+  id: Long = null.asInstanceOf[Long],
 
-  @Column(name = "COLOR")
-  val color: String = _color
+  @(Column@field)(name = "COLOR")
+  color: String = null
+
+) {
+  def this() = this(null.asInstanceOf[Long], null)
 }
