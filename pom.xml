@@ -120,6 +120,17 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
+      <plugin>
+       <groupId>com.rimerosolutions.maven.plugins</groupId>
+       <artifactId>wrapper-maven-plugin</artifactId>
+       <version>0.0.5</version>
+       <configuration>
+     <!-- optional base distribution url -->
+        <baseDistributionUrl>https://repository.apache.org/content/repositories/releases/org/apache/maven/apache-maven</baseDistributionUrl>
+        <!-- optional wrapper jar output folder -->
+         <wrapperDirectory>${basedir}/maven</wrapperDirectory>
+       </configuration>
+     </plugin>
     </plugins>
   </build>
 </project>

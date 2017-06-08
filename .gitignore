@@ -21,8 +21,9 @@ syntax: glob
 *.iws
 
 # building
-target
-build
+maven/
+target/
+build/
 null
 tmp*
 temp*
